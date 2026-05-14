@@ -1,0 +1,17 @@
+TAP version 13
+ok 1 - GET list returns 200
+ok 2 - GET list response is JSON array
+ok 3 - POST create with valid-shape body → 2xx or typed 4xx
+ok 4 - POST create with empty body → 4xx
+ok 5 - POST create with invalid types → 4xx
+ok 6 - Validation rejection includes errorCode
+ok 7 - POST execute with empty body → 4xx
+ok 8 - POST retrieve with empty body → 4xx
+ok 9 - POST cancel-early with empty body → 4xx
+ok 10 - POST cancel-early with non-JSON body → 4xx
+ok 11 - GET on /create returns 405 (method not allowed)
+ok 12 - DELETE on /option returns 405
+ok 13 - OpenAPI spec served at /swagger/api.json
+ok 14 - OpenAPI mentions /DEX/option/create
+ok 15 - OpenAPI mentions /DEX/option/cancel-early
+1..15

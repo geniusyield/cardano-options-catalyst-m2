@@ -1,0 +1,93 @@
+{
+  "_comment": "Canonical Plutus-data JSON for the M3 Call demo series' CIP-68 inline datum. This is exactly what wallets read from the reference NFT UTxO at the AlwaysFails address. Verify against this file via `cardano-cli transaction view --tx-file=<signed.tx>` after minting, or by `Plutus.fromBuiltinData` round-tripping through `toCIP68Datum exampleCallSeries`.",
+  "_spec": "CIP-68 datum shape: Constr 0 [metadata_map, version, extra]. Version is 1. Extra is the unit Constr 0 []. Keys in metadata_map are UTF-8 encoded as bytes per CIP-68.",
+  "_source": "Generated from CIP68.exampleCallSeries — see Core/src/GeniusYield/Api/DEX/Option/CIP68.hs",
+
+  "constructor": 0,
+  "fields": [
+    {
+      "map": [
+        {
+          "k": { "bytes": "6e616d65" },
+          "v": { "bytes": "47656e6975735969656c64204144412e29474e53204361202073747269656b6520302e35" },
+          "_key": "name",
+          "_value": "GeniusYield ADA-GENS Call * strike 0.5"
+        },
+        {
+          "k": { "bytes": "696d616765" },
+          "v": { "bytes": "646174613a696d6167652f7376672b786d6c3b6261736536342c504c414345484f4c4445525f4c4f474f" },
+          "_key": "image",
+          "_value": "data:image/svg+xml;base64,PLACEHOLDER_LOGO"
+        },
+        {
+          "k": { "bytes": "6465736372697074696f6e" },
+          "v": { "bytes": "4575726f7065616e2d7374796c652063616c6c206f7074696f6e3a20746865206275796572206d61792065786368616e6765204144413a204745535320617420737472696b6520302e35..." },
+          "_key": "description",
+          "_value": "European-style call option: the buyer may exchange ADA for GENS at strike 0.5 within the active window. Cancellable by the seller before the cutoff."
+        },
+        {
+          "k": { "bytes": "6465706f7369745f706f6c696379" },
+          "v": { "bytes": "" },
+          "_key": "deposit_policy",
+          "_value": "(empty = ADA)"
+        },
+        {
+          "k": { "bytes": "6465706f7369745f6173736574" },
+          "v": { "bytes": "" },
+          "_key": "deposit_asset",
+          "_value": "(empty = ADA)"
+        },
+        {
+          "k": { "bytes": "7061796d656e745f706f6c696379" },
+          "v": { "bytes": "646461356664623130303266373338396233336530333662366166656538326138313839626563623663626138353265386237396234666220" },
+          "_key": "payment_policy",
+          "_value": "dda5fdb1002f7389b33e036b6afee82a8189becb6cba852e8b79b4fb"
+        },
+        {
+          "k": { "bytes": "7061796d656e745f6173736574" },
+          "v": { "bytes": "30303134646631303437343534653533" },
+          "_key": "payment_asset",
+          "_value": "0014df1047454e53 (GENS hex asset name)"
+        },
+        {
+          "k": { "bytes": "737472696b65" },
+          "v": { "bytes": "302e35" },
+          "_key": "strike",
+          "_value": "0.5"
+        },
+        {
+          "k": { "bytes": "73746172745f736c6f74" },
+          "v": { "int": 0 },
+          "_key": "start_slot",
+          "_value": "0 (placeholder — overwritten with real slot at mint time)"
+        },
+        {
+          "k": { "bytes": "656e645f736c6f74" },
+          "v": { "int": 0 },
+          "_key": "end_slot",
+          "_value": "0 (placeholder — overwritten with real slot at mint time)"
+        },
+        {
+          "k": { "bytes": "74797065" },
+          "v": { "bytes": "63616c6c" },
+          "_key": "type",
+          "_value": "call"
+        },
+        {
+          "k": { "bytes": "63616e63656c6c61626c65" },
+          "v": { "int": 1 },
+          "_key": "cancellable",
+          "_value": "1 (true)"
+        },
+        {
+          "k": { "bytes": "6665655f6366675f726566" },
+          "v": { "bytes": "" },
+          "_key": "fee_cfg_ref",
+          "_value": "(empty = no fee config)"
+        }
+      ]
+    },
+    { "int": 1, "_comment": "CIP-68 version" },
+    { "constructor": 0, "fields": [], "_comment": "extra (unit)" }
+  ]
+}

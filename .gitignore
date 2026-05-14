@@ -1,0 +1,26 @@
+# Haskell
+dist/
+dist-newstyle/
+.ghc.environment.*
+.stack-work/
+.cabal-sandbox
+cabal.sandbox.config
+
+# Node
+node_modules/
+dist/
+.vite/
+*.log
+
+# Aiken
+build/
+artifacts/
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+*.swp
+
+# Test artefacts
+*.tmp

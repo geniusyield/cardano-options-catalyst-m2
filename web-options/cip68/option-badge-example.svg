@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F2027"/>
+      <stop offset="100%" stop-color="#2C5364"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="300" fill="url(#bg)"/>
+  <text x="150" y="38" text-anchor="middle" fill="#7CFFCB" font-family="system-ui,sans-serif" font-size="14" font-weight="600" letter-spacing="2">GENIUSYIELD</text>
+  <text x="150" y="90" text-anchor="middle" fill="#FFFFFF" font-family="system-ui,sans-serif" font-size="48" font-weight="800">CALL</text>
+  <text x="150" y="135" text-anchor="middle" fill="#D5F5FF" font-family="system-ui,sans-serif" font-size="20">ADA &#8594; GENS</text>
+  <text x="150" y="180" text-anchor="middle" fill="#FFD166" font-family="system-ui,sans-serif" font-size="34" font-weight="700">@ 0.5</text>
+  <text x="150" y="205" text-anchor="middle" fill="#AAB8C2" font-family="system-ui,sans-serif" font-size="12">strike</text>
+  <text x="150" y="245" text-anchor="middle" fill="#D5F5FF" font-family="system-ui,sans-serif" font-size="12">slots 0&#8211;86400</text>
+  <text x="150" y="278" text-anchor="middle" fill="#7CFFCB" font-family="system-ui,sans-serif" font-size="11" letter-spacing="2">CANCELLABLE</text>
+</svg>
