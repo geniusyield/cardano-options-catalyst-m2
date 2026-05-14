@@ -10,14 +10,14 @@
 
 | Catalyst acceptance criterion | Where it lives | Status |
 |---|---|---|
-| Haskell builders: `createOption`, `executeOption`, `retrieveOption`, `cancelEarlyOption` | `Core/src/GeniusYield/Api/DEX/Option.hs` (lines 170 – 315) | ✅ Complete |
-| REST API: GET list + POST create / execute / retrieve / cancel-early | `Core/src-server-lib/GeniusYield/Server/DEX/Option.hs` (lines 243 – 318) | ✅ Complete |
+| Haskell builders: `createOption`, `executeOption`, `retrieveOption`, `cancelEarlyOption` | [`src/GeniusYield/Api/DEX/Option.hs`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src/GeniusYield/Api/DEX/Option.hs) (lines 170 – 315) | ✅ Complete |
+| REST API: GET list + POST create / execute / retrieve / cancel-early | [`src-server-lib/GeniusYield/Server/DEX/Option.hs`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src-server-lib/GeniusYield/Server/DEX/Option.hs) (lines 243 – 318) | ✅ Complete |
 | Wired to Atlas PAB, returns unsigned txs | `runSkeletonI` + `returnUnsigned` in handler — line 289 | ✅ Complete |
-| Minimal web UI (CIP-30) for full lifecycle | `Core/web-options/` — this directory | ✅ Complete (4 pages, all 4 flows wired) |
-| Haskell backend tests | `Core/tests/GeniusYield/Test/DEX/Option.hs` — 8 trace cases | ✅ All passing |
-| API server tests | `Core/web-options/api-tests/run.sh` (15 contract tests, TAP output) | ✅ **15/15 passing — 100%** |
-| Atlas tx-build queue load test | `Core/web-options/load-test/run.sh` | ✅ **30/30 passing — 100%** |
-| OpenAPI / API docs | `Core/web/swagger/api.json` (auto-generated) + `/swagger/index.html` | ✅ Complete |
+| Minimal web UI (CIP-30) for full lifecycle | [`web-options/`](https://github.com/geniusyield/cardano-options-catalyst-m2/tree/main/web-options/) — this directory | ✅ Complete (4 pages, all 4 flows wired) |
+| Haskell backend tests | [`tests/GeniusYield/Test/DEX/Option.hs`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/tests/GeniusYield/Test/DEX/Option.hs) — 8 trace cases | ✅ All passing |
+| API server tests | [`web-options/api-tests/run.sh`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/web-options/api-tests/run.sh) (15 contract tests, TAP output) | ✅ **15/15 passing — 100%** |
+| Atlas tx-build queue load test | [`web-options/load-test/run.sh`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/web-options/load-test/run.sh) | ✅ **30/30 passing — 100%** |
+| OpenAPI / API docs | [`web/swagger/api.json`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/web/swagger/api.json) (auto-generated) + `/swagger/index.html` | ✅ Complete |
 | Logs & observability | Tx Server structured JSON logs | ✅ In place |
 
 ---
@@ -118,7 +118,7 @@ constitutes complete evidence that the Execute flow operates as specified.
 
 ### 3.5 Static UI screenshots
 
-`Core/web-options/screenshots/`:
+[`web-options/screenshots/`](https://github.com/geniusyield/cardano-options-catalyst-m2/tree/main/web-options/screenshots/):
 - `m2-ui-browse.png` — list of open option contracts
 - `m2-ui-create.png` — create form with one-click demo presets
 - `m2-ui-manage.png` — Execute / Retrieve / Cancel-Early panel
@@ -205,7 +205,7 @@ Outputs:
 
 ## 6 · Backend Trace Tests (chain emulator)
 
-`Core/tests/GeniusYield/Test/DEX/Option.hs`:
+[`tests/GeniusYield/Test/DEX/Option.hs`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/tests/GeniusYield/Test/DEX/Option.hs):
 
 | # | Trace | Type | Result |
 |---|---|---|---|
@@ -235,7 +235,7 @@ binds locally and is parametrised by Cardano network in `config-core.json`.
 
 ```bash
 # 1. Clone the repository (private — request access if needed)
-git clone https://github.com/geniusyield/Core.git && cd Core
+git clone https://github.com/geniusyield/cardano-options-catalyst-m2.git && cd Core
 
 # 2. Configure the Tx Server for preview testnet
 #    Edit config-core.json:
@@ -256,7 +256,7 @@ TX_SERVER_URL=http://127.0.0.1:8082 N=30 ./load-test/run.sh  # 30-tx load
 cd .. && cabal run geniusyield-tests -- --pattern "Option"   # 8 traces
 ```
 
-The OpenAPI / Swagger spec at `Core/web/swagger/api.json` is bundled in
+The OpenAPI / Swagger spec at [`web/swagger/api.json`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/web/swagger/api.json) is bundled in
 the repository — no live deployment is required to review the API surface.
 
 ---
@@ -265,15 +265,15 @@ the repository — no live deployment is required to review the API surface.
 
 | Resource | URL |
 |---|---|
-| **GitHub repository** | https://github.com/geniusyield/Core |
-| **Off-chain builders** | `Core/src/GeniusYield/Api/DEX/Option.hs` |
-| **REST API server** | `Core/src-server-lib/GeniusYield/Server/DEX/Option.hs` |
-| **Web UI** | `Core/web-options/` |
-| **Backend tests** | `Core/tests/GeniusYield/Test/DEX/Option.hs` |
-| **API contract tests** | `Core/web-options/api-tests/` |
-| **Load test** | `Core/web-options/load-test/` |
-| **OpenAPI spec** | `Core/web/swagger/api.json` (bundled in repo) |
-| **Milestone 2 evidence** | this file (`Core/web-options/MILESTONE-2.md`) |
+| **GitHub repository** | https://github.com/geniusyield/cardano-options-catalyst-m2 |
+| **Off-chain builders** | [`src/GeniusYield/Api/DEX/Option.hs`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src/GeniusYield/Api/DEX/Option.hs) |
+| **REST API server** | [`src-server-lib/GeniusYield/Server/DEX/Option.hs`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src-server-lib/GeniusYield/Server/DEX/Option.hs) |
+| **Web UI** | [`web-options/`](https://github.com/geniusyield/cardano-options-catalyst-m2/tree/main/web-options/) |
+| **Backend tests** | [`tests/GeniusYield/Test/DEX/Option.hs`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/tests/GeniusYield/Test/DEX/Option.hs) |
+| **API contract tests** | [`web-options/api-tests/`](https://github.com/geniusyield/cardano-options-catalyst-m2/tree/main/web-options/api-tests/) |
+| **Load test** | [`web-options/load-test/`](https://github.com/geniusyield/cardano-options-catalyst-m2/tree/main/web-options/load-test/) |
+| **OpenAPI spec** | [`web/swagger/api.json`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/web/swagger/api.json) (bundled in repo) |
+| **Milestone 2 evidence** | this file ([`web-options/MILESTONE-2.md`](https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/web-options/MILESTONE-2.md)) |
 | **Screencast (Loom)** | https://www.loom.com/share/251610c817424feda7f11fe2b9a6a11c |
 | **All Cardanoscan tx links** | Section 3.3 above |
 
@@ -288,5 +288,5 @@ the repository — no live deployment is required to review the API surface.
 
 CI badge (after first successful run):
 ```markdown
-![Options M2](https://github.com/<org>/Core/actions/workflows/options-m2.yml/badge.svg)
+![Options M2](https://github.com/geniusyield/cardano-options-catalyst-m2/actions/workflows/options-m2.yml/badge.svg)
 ```

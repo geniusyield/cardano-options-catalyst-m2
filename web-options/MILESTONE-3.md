@@ -2,7 +2,7 @@
 ## GeniusYield · CIP-68 metadata for option tokens
 
 **Network:** Cardano Preview testnet
-**Repository:** https://github.com/geniusyield/Core
+**Repository:** https://github.com/geniusyield/cardano-options-catalyst-m2
 **Submission date:** _to fill in after recording_
 **Screencast:** _to fill in after recording_
 
@@ -28,18 +28,18 @@ Every artifact below is a clickable deep-link. Evaluators can review the M3 impl
 
 | Layer | File |
 |---|---|
-| **CIP-68 metadata type + serialiser** | https://github.com/geniusyield/Core/blob/main/src/GeniusYield/Api/DEX/Option/CIP68.hs |
-| **Off-chain `createOptionWithCIP68` builder** | https://github.com/geniusyield/Core/blob/main/src/GeniusYield/Api/DEX/Option.hs |
-| **Reference-NFT lock (AlwaysFails)** | https://github.com/geniusyield/Core/blob/main/src-plutustx/GeniusYield/OnChain/DEX/Option/CIP68Reference.hs |
-| **Compiled Template-Haskell wrapper** | https://github.com/geniusyield/Core/blob/main/src-plutustx/GeniusYield/OnChain/DEX/Option/CIP68Reference/Compiled.hs |
-| **Typed `GYScript` re-export** | https://github.com/geniusyield/Core/blob/main/src/GeniusYield/Scripts/DEX/Option.hs |
-| **SVG badge renderer** | https://github.com/geniusyield/Core/blob/main/src/GeniusYield/Api/DEX/Option/Badge.hs |
-| **REST endpoint `/DEX/option/create-cip68`** | https://github.com/geniusyield/Core/blob/main/src-server-lib/GeniusYield/Server/DEX/Option.hs |
-| **Web UI `CreateCIP68` page** | https://github.com/geniusyield/Core/blob/main/web-options/src/pages/CreateCIP68.tsx |
-| **Trace + unit tests** | https://github.com/geniusyield/Core/blob/main/tests/GeniusYield/Test/DEX/OptionCIP68.hs |
-| **Datum JSON example** | https://github.com/geniusyield/Core/blob/main/web-options/cip68/cip68-example.json |
-| **Badge SVG example** | https://github.com/geniusyield/Core/blob/main/web-options/cip68/option-badge-example.svg |
-| **Mint playbook** | https://github.com/geniusyield/Core/blob/main/web-options/cip68/MINT-PLAYBOOK.md |
+| **CIP-68 metadata type + serialiser** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src/GeniusYield/Api/DEX/Option/CIP68.hs |
+| **Off-chain `createOptionWithCIP68` builder** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src/GeniusYield/Api/DEX/Option.hs |
+| **Reference-NFT lock (AlwaysFails)** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src-plutustx/GeniusYield/OnChain/DEX/Option/CIP68Reference.hs |
+| **Compiled Template-Haskell wrapper** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src-plutustx/GeniusYield/OnChain/DEX/Option/CIP68Reference/Compiled.hs |
+| **Typed `GYScript` re-export** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src/GeniusYield/Scripts/DEX/Option.hs |
+| **SVG badge renderer** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src/GeniusYield/Api/DEX/Option/Badge.hs |
+| **REST endpoint `/DEX/option/create-cip68`** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/src-server-lib/GeniusYield/Server/DEX/Option.hs |
+| **Web UI `CreateCIP68` page** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/web-options/src/pages/CreateCIP68.tsx |
+| **Trace + unit tests** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/tests/GeniusYield/Test/DEX/OptionCIP68.hs |
+| **Datum JSON example** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/web-options/cip68/cip68-example.json |
+| **Badge SVG example** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/web-options/cip68/option-badge-example.svg |
+| **Mint playbook** | https://github.com/geniusyield/cardano-options-catalyst-m2/blob/main/web-options/cip68/MINT-PLAYBOOK.md |
 
 ---
 
@@ -172,7 +172,7 @@ The eight M2 trace tests (`Test.DEX.Option`) also remain green, confirming backw
 
 Anyone can re-mint the demo series end-to-end:
 
-1. Clone `https://github.com/geniusyield/Core`, build per `README.md`.
+1. Clone `https://github.com/geniusyield/cardano-options-catalyst-m2`, build per `README.md`.
 2. Boot the Tx Server on `:8082` with `geniusyield-server config-core.json config-dex.json config-rewards.json`.
 3. `cd web-options && yarn dev` (port 5174).
 4. Connect a CIP-30 wallet on preview, funded with ≥10 tADA.
